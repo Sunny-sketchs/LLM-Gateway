@@ -1,0 +1,14 @@
+
+
+# backend
+fastapi
+uvicorn
+
+# env & validation
+pydantic
+pydantic-settings
+python-dotenv
+
+# llm
+openai
+tiktoken
