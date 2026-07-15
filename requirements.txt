@@ -12,3 +12,7 @@ python-dotenv
 # llm
 openai
 tiktoken
+
+presidio-analyzer
+presidio-anonymizer
+spacy
