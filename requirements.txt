@@ -1,18 +1,21 @@
 
 
 # backend
-fastapi
+fastapi~=0.139.0
 uvicorn
 
 # env & validation
-pydantic
+pydantic~=2.13.4
 pydantic-settings
-python-dotenv
+python-dotenv~=1.2.2
 
 # llm
-openai
+openai~=2.45.0
 tiktoken
 
 presidio-analyzer
 presidio-anonymizer
 spacy
+presidio_analyzer~=2.2.363
+presidio_anonymizer~=2.2.363
+redis~=8.0.1

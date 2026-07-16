@@ -1,0 +1,19 @@
+[project]
+name = "llm-gateway"
+version = "0.1.0"
+description = """A FastAPI proxy that sits between client apps and an LLM API, adding
+                    PII redaction, prompt-injection detection, rate limiting, caching,
+                    and request-level cost/audit logging."""
+authors = [
+    {name = "Sunny Bhatkar email-sunnysb2004@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "redis (>=8.0.1,<9.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

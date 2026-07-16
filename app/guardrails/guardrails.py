@@ -3,16 +3,13 @@ from presidio_analyzer.nlp_engine import NlpEngineProvider
 from presidio_anonymizer import AnonymizerEngine
 from fastapi.exceptions import HTTPException
 from app.config import settings
-import spacy
 import logging
 
 logger = logging.getLogger(__name__)
 
-spacy.load('en_core_web_sm')
-
 configuration = {
-    "nlp_engine_name": "spacy",
-    "models": [{"lang_code": "en", "model_name": "en_core_web_sm"}],
+    "nlp_engine_name": settings.guard_nlp_engine_name,
+    "models": settings.guard_models,
 }
 
 provider = NlpEngineProvider(nlp_configuration=configuration)
@@ -22,6 +19,7 @@ analyzer = AnalyzerEngine(nlp_engine=nlp_engine, supported_languages=["en"])
 
 anonymizer = AnonymizerEngine()
 
+HIGH_CONFIDENCE_ENTITIES = {"EMAIL_ADDRESS", "PHONE_NUMBER", "CREDIT_CARD", "US_SSN", "IBAN_CODE"}
 
 class PII:
     """
@@ -32,9 +30,12 @@ class PII:
 
         try:
             print(query)
-            ans = analyzer.analyze(query, language="en")
-            print(ans)
-            filter_by_score = [r for r in ans if r.score > 0.5]
+            results = analyzer.analyze(query, language="en")
+            print(results)
+            filter_by_score = [
+                r for r in results
+                if r.score > settings.guard_pii_threshold and r.entity_type in HIGH_CONFIDENCE_ENTITIES
+            ]
             print(filter_by_score)
             anonymizer_result = anonymizer.anonymize(
                 text=query,
