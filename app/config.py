@@ -17,7 +17,9 @@ class Settings(BaseSettings):
     daily_request_limit: int = 50
     llm_max_output_tokens: int = 500
 
-    openai_tokenizer_model = "gpt-4o-mini"
+    CACHE_TTL_SECONDS: int = 60 * 60 * 24 * 7
+
+    openai_tokenizer_model: str = "gpt-4o-mini"
 
     model_config = SettingsConfigDict(
         env_file=os.getenv(".env"),

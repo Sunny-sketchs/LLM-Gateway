@@ -1,0 +1,217 @@
+2026-07-17 05:40:32 - GatewayLogger - INFO - limit-> provider = openai
+2026-07-17 05:40:32 - GatewayLogger - INFO - limit-> total count = 1
+2026-07-17 05:40:32 - GatewayLogger - INFO - Proxy-> promt_token = 1
+2026-07-17 05:40:32 - GatewayLogger - INFO - limit-> today = 2026-07-17
+2026-07-17 05:40:32 - GatewayLogger - INFO - limit-> redis key : usage:anonymous:2026-07-17
+2026-07-17 05:40:33 - GatewayLogger - INFO - limit-> count = 1
+2026-07-17 05:40:33 - GatewayLogger - INFO - Proxy-> daily_request_count = 1
+2026-07-17 05:40:33 - GatewayLogger - INFO - Proxy-> hash_query = 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
+2026-07-17 05:40:34 - GatewayLogger - INFO - Proxy-> Query exist-> False
+2026-07-17 05:59:22 - GatewayLogger - INFO - limit-> provider = openai
+2026-07-17 05:59:23 - GatewayLogger - INFO - limit-> total count = 1
+2026-07-17 05:59:23 - GatewayLogger - INFO - Proxy-> promt_token = 1
+2026-07-17 05:59:23 - GatewayLogger - INFO - limit-> today = 2026-07-17
+2026-07-17 05:59:23 - GatewayLogger - INFO - limit-> redis key : usage:anonymous:2026-07-17
+2026-07-17 05:59:27 - GatewayLogger - INFO - limit-> count = 2
+2026-07-17 05:59:27 - GatewayLogger - INFO - Proxy-> daily_request_count = 2
+2026-07-17 05:59:27 - GatewayLogger - INFO - Query Normalized
+2026-07-17 05:59:27 - GatewayLogger - INFO - query hashed successfully
+2026-07-17 05:59:27 - GatewayLogger - INFO - Proxy-> hash_query = 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
+2026-07-17 05:59:28 - GatewayLogger - INFO - cache-> Query in cached
+2026-07-17 05:59:28 - GatewayLogger - INFO - Proxy-> Query exist-> False
+2026-07-17 06:06:06 - GatewayLogger - INFO - limit-> provider = openai
+2026-07-17 06:06:07 - GatewayLogger - INFO - limit-> total count = 1
+2026-07-17 06:06:07 - GatewayLogger - INFO - Proxy-> promt_token = 1
+2026-07-17 06:06:07 - GatewayLogger - INFO - limit-> today = 2026-07-17
+2026-07-17 06:06:07 - GatewayLogger - INFO - limit-> redis key : usage:anonymous:2026-07-17
+2026-07-17 06:06:09 - GatewayLogger - INFO - limit-> count = 3
+2026-07-17 06:06:09 - GatewayLogger - INFO - Proxy-> daily_request_count = 3
+2026-07-17 06:06:09 - GatewayLogger - INFO - Query Normalized
+2026-07-17 06:06:09 - GatewayLogger - INFO - query hashed successfully
+2026-07-17 06:06:09 - GatewayLogger - INFO - Proxy-> hash_query = 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
+2026-07-17 06:06:10 - GatewayLogger - INFO - cache-> Query in cached
+2026-07-17 06:06:10 - GatewayLogger - INFO - Proxy-> Query exist-> False
+2026-07-17 06:06:15 - GatewayLogger - INFO - Cache created
+2026-07-17 06:07:34 - GatewayLogger - INFO - limit-> provider = openai
+2026-07-17 06:07:34 - GatewayLogger - INFO - limit-> total count = 1
+2026-07-17 06:07:34 - GatewayLogger - INFO - Proxy-> promt_token = 1
+2026-07-17 06:07:34 - GatewayLogger - INFO - limit-> today = 2026-07-17
+2026-07-17 06:07:34 - GatewayLogger - INFO - limit-> redis key : usage:anonymous:2026-07-17
+2026-07-17 06:07:34 - GatewayLogger - INFO - limit-> count = 4
+2026-07-17 06:07:34 - GatewayLogger - INFO - Proxy-> daily_request_count = 4
+2026-07-17 06:07:34 - GatewayLogger - INFO - Query Normalized
+2026-07-17 06:07:34 - GatewayLogger - INFO - query hashed successfully
+2026-07-17 06:07:34 - GatewayLogger - INFO - Proxy-> hash_query = 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
+2026-07-17 06:07:35 - GatewayLogger - INFO - cache-> Query not in cached
+2026-07-17 06:07:35 - GatewayLogger - INFO - Proxy-> Query exist-> response=AskResponse(response='Hello! How can I assist you today?', tokens_used=162, provider='openai', cache_hit=False, pii_detected=False) cached_at=datetime.datetime(2026, 7, 17, 0, 36, 15, 187639, tzinfo=TzInfo(0))
+2026-07-17 06:12:03 - GatewayLogger - INFO - limit-> provider = openai
+2026-07-17 06:12:04 - GatewayLogger - INFO - limit-> total count = 1
+2026-07-17 06:12:04 - GatewayLogger - INFO - Proxy-> promt_token = 1
+2026-07-17 06:12:04 - GatewayLogger - INFO - limit-> today = 2026-07-17
+2026-07-17 06:12:04 - GatewayLogger - INFO - limit-> redis key : usage:anonymous:2026-07-17
+2026-07-17 06:12:04 - GatewayLogger - INFO - limit-> count = 5
+2026-07-17 06:12:04 - GatewayLogger - INFO - Proxy-> daily_request_count = 5
+2026-07-17 06:12:04 - GatewayLogger - INFO - Query Normalized
+2026-07-17 06:12:04 - GatewayLogger - INFO - query hashed successfully
+2026-07-17 06:12:04 - GatewayLogger - INFO - Proxy-> hash_query = 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
+2026-07-17 06:12:04 - GatewayLogger - INFO - cache-> Query in cached
+2026-07-17 06:12:04 - GatewayLogger - INFO - Proxy-> Query exist-> response=AskResponse(response='Hello! How can I assist you today?', tokens_used=162, provider='openai', cache_hit=True, pii_detected=False) cached_at=datetime.datetime(2026, 7, 17, 0, 36, 15, 187639, tzinfo=TzInfo(0))
+2026-07-17 15:22:28 - GatewayLogger - INFO - limit-> provider = openai
+2026-07-17 15:22:29 - GatewayLogger - INFO - limit-> total count = 5
+2026-07-17 15:22:29 - GatewayLogger - INFO - Proxy-> promt_token = 5
+2026-07-17 15:22:29 - GatewayLogger - INFO - limit-> today = 2026-07-17
+2026-07-17 15:22:29 - GatewayLogger - INFO - limit-> redis key : usage:anonymous:2026-07-17
+2026-07-17 15:22:29 - GatewayLogger - INFO - limit-> count = 6
+2026-07-17 15:22:29 - GatewayLogger - INFO - Proxy-> daily_request_count = 6
+2026-07-17 15:22:29 - GatewayLogger - INFO - Query Normalized
+2026-07-17 15:22:29 - GatewayLogger - INFO - query hashed successfully
+2026-07-17 15:22:29 - GatewayLogger - INFO - Proxy-> hash_query = None
+2026-07-17 15:22:29 - GatewayLogger - INFO - cache-> Query not in cached
+2026-07-17 15:22:29 - GatewayLogger - INFO - Proxy-> Query exist-> False
+2026-07-17 15:22:30 - GatewayLogger - INFO - PII detected
+2026-07-17 15:22:30 - GatewayLogger - INFO - PII detected
+2026-07-17 15:22:35 - GatewayLogger - INFO - CacheEntry return
+2026-07-17 15:23:09 - GatewayLogger - INFO - limit-> provider = openai
+2026-07-17 15:23:09 - GatewayLogger - INFO - limit-> total count = 3
+2026-07-17 15:23:09 - GatewayLogger - INFO - Proxy-> promt_token = 3
+2026-07-17 15:23:09 - GatewayLogger - INFO - limit-> today = 2026-07-17
+2026-07-17 15:23:09 - GatewayLogger - INFO - limit-> redis key : usage:anonymous:2026-07-17
+2026-07-17 15:23:10 - GatewayLogger - INFO - limit-> count = 7
+2026-07-17 15:23:10 - GatewayLogger - INFO - Proxy-> daily_request_count = 7
+2026-07-17 15:23:10 - GatewayLogger - INFO - Query Normalized
+2026-07-17 15:23:10 - GatewayLogger - INFO - query hashed successfully
+2026-07-17 15:23:10 - GatewayLogger - INFO - Proxy-> hash_query = None
+2026-07-17 15:23:10 - GatewayLogger - INFO - cache-> Query not in cached
+2026-07-17 15:23:10 - GatewayLogger - INFO - Proxy-> Query exist-> False
+2026-07-17 15:23:10 - GatewayLogger - INFO - NO PII Detected
+2026-07-17 15:23:10 - GatewayLogger - INFO - No PII detected
+2026-07-17 15:23:10 - GatewayLogger - INFO - PII detected
+2026-07-17 15:23:12 - GatewayLogger - INFO - CacheEntry return
+2026-07-17 15:23:12 - GatewayLogger - INFO - Could not store cache-> 1 validation error for CacheEntry
+response
+  Input should be a valid dictionary or instance of AskResponse [type=model_type, input_value=CacheEntry(response=AskRe...=False), cached_at=None), input_type=CacheEntry]
+    For further information visit https://errors.pydantic.dev/2.13/v/model_type
+2026-07-17 15:28:34 - GatewayLogger - INFO - limit-> provider = openai
+2026-07-17 15:28:35 - GatewayLogger - INFO - limit-> total count = 3
+2026-07-17 15:28:35 - GatewayLogger - INFO - Proxy-> promt_token = 3
+2026-07-17 15:28:35 - GatewayLogger - INFO - limit-> today = 2026-07-17
+2026-07-17 15:28:35 - GatewayLogger - INFO - limit-> redis key : usage:anonymous:2026-07-17
+2026-07-17 15:28:36 - GatewayLogger - INFO - limit-> count = 8
+2026-07-17 15:28:36 - GatewayLogger - INFO - Proxy-> daily_request_count = 8
+2026-07-17 15:28:36 - GatewayLogger - INFO - Query Normalized
+2026-07-17 15:28:36 - GatewayLogger - INFO - query hashed successfully
+2026-07-17 15:28:36 - GatewayLogger - INFO - Proxy-> hash_query = None
+2026-07-17 15:28:36 - GatewayLogger - INFO - cache-> Query not in cached
+2026-07-17 15:28:36 - GatewayLogger - INFO - Proxy-> Query exist-> False
+2026-07-17 15:28:36 - GatewayLogger - INFO - NO PII Detected
+2026-07-17 15:28:36 - GatewayLogger - INFO - No PII detected
+2026-07-17 15:28:36 - GatewayLogger - INFO - PII detected
+2026-07-17 15:28:41 - GatewayLogger - INFO - Cache created
+2026-07-17 15:40:36 - GatewayLogger - INFO - limit-> provider = openai
+2026-07-17 15:40:37 - GatewayLogger - INFO - limit-> total count = 3
+2026-07-17 15:40:37 - GatewayLogger - INFO - Proxy-> promt_token = 3
+2026-07-17 15:40:37 - GatewayLogger - INFO - limit-> today = 2026-07-17
+2026-07-17 15:40:37 - GatewayLogger - INFO - limit-> redis key : usage:anonymous:2026-07-17
+2026-07-17 15:40:37 - GatewayLogger - INFO - limit-> count = 9
+2026-07-17 15:40:37 - GatewayLogger - INFO - Proxy-> daily_request_count = 9
+2026-07-17 15:40:37 - GatewayLogger - INFO - Query Normalized
+2026-07-17 15:40:37 - GatewayLogger - INFO - query hashed successfully
+2026-07-17 15:40:37 - GatewayLogger - INFO - Proxy-> hash_query = None
+2026-07-17 15:40:37 - GatewayLogger - INFO - cache-> Query in cached
+2026-07-17 15:40:37 - GatewayLogger - INFO - Proxy-> Query exist-> response=AskResponse(response='The capital of France is Paris.', tokens_used=161, provider='openai', cache_hit=True, pii_detected=False) cached_at=datetime.datetime(2026, 7, 17, 9, 58, 41, 143532, tzinfo=TzInfo(0))
+2026-07-17 15:52:51 - GatewayLogger - INFO - limit-> provider = openai
+2026-07-17 15:52:51 - GatewayLogger - INFO - limit-> total count = 3
+2026-07-17 15:52:51 - GatewayLogger - INFO - Proxy-> promt_token = 3
+2026-07-17 15:52:51 - GatewayLogger - INFO - limit-> today = 2026-07-17
+2026-07-17 15:52:51 - GatewayLogger - INFO - limit-> redis key : usage:anonymous:2026-07-17
+2026-07-17 15:52:52 - GatewayLogger - INFO - limit-> count = 1
+2026-07-17 15:52:52 - GatewayLogger - INFO - Proxy-> daily_request_count = 1
+2026-07-17 15:52:52 - GatewayLogger - INFO - Query Normalized
+2026-07-17 15:52:52 - GatewayLogger - INFO - query hashed successfully
+2026-07-17 15:52:52 - GatewayLogger - INFO - Proxy-> hash_query = None
+2026-07-17 15:52:52 - GatewayLogger - INFO - cache-> Query not in cached
+2026-07-17 15:52:52 - GatewayLogger - INFO - Proxy-> Query exist-> False
+2026-07-17 15:52:52 - GatewayLogger - INFO - NO PII Detected
+2026-07-17 15:52:52 - GatewayLogger - INFO - No PII detected
+2026-07-17 15:52:52 - GatewayLogger - INFO - PII detected
+2026-07-17 15:52:57 - GatewayLogger - INFO - Cache created
+2026-07-17 15:53:20 - GatewayLogger - INFO - limit-> provider = openai
+2026-07-17 15:53:20 - GatewayLogger - INFO - limit-> total count = 3
+2026-07-17 15:53:20 - GatewayLogger - INFO - Proxy-> promt_token = 3
+2026-07-17 15:53:20 - GatewayLogger - INFO - limit-> today = 2026-07-17
+2026-07-17 15:53:20 - GatewayLogger - INFO - limit-> redis key : usage:anonymous:2026-07-17
+2026-07-17 15:53:20 - GatewayLogger - INFO - limit-> count = 2
+2026-07-17 15:53:20 - GatewayLogger - INFO - Proxy-> daily_request_count = 2
+2026-07-17 15:53:20 - GatewayLogger - INFO - Query Normalized
+2026-07-17 15:53:20 - GatewayLogger - INFO - query hashed successfully
+2026-07-17 15:53:20 - GatewayLogger - INFO - Proxy-> hash_query = None
+2026-07-17 15:53:20 - GatewayLogger - INFO - cache-> Query in cached
+2026-07-17 15:53:20 - GatewayLogger - INFO - Proxy-> Query exist-> response=AskResponse(response='The capital of Japan is Tokyo.', tokens_used=161, provider='openai', cache_hit=True, pii_detected=False) cached_at=datetime.datetime(2026, 7, 17, 10, 22, 57, 816380, tzinfo=TzInfo(0))
+2026-07-17 15:53:28 - GatewayLogger - INFO - limit-> provider = openai
+2026-07-17 15:53:28 - GatewayLogger - INFO - limit-> total count = 3
+2026-07-17 15:53:28 - GatewayLogger - INFO - Proxy-> promt_token = 3
+2026-07-17 15:53:28 - GatewayLogger - INFO - limit-> today = 2026-07-17
+2026-07-17 15:53:28 - GatewayLogger - INFO - limit-> redis key : usage:anonymous:2026-07-17
+2026-07-17 15:53:29 - GatewayLogger - INFO - limit-> count = 3
+2026-07-17 15:53:29 - GatewayLogger - INFO - Proxy-> daily_request_count = 3
+2026-07-17 15:53:29 - GatewayLogger - INFO - Query Normalized
+2026-07-17 15:53:29 - GatewayLogger - INFO - query hashed successfully
+2026-07-17 15:53:29 - GatewayLogger - INFO - Proxy-> hash_query = None
+2026-07-17 15:53:29 - GatewayLogger - INFO - cache-> Query in cached
+2026-07-17 15:53:29 - GatewayLogger - INFO - Proxy-> Query exist-> response=AskResponse(response='The capital of Japan is Tokyo.', tokens_used=161, provider='openai', cache_hit=True, pii_detected=False) cached_at=datetime.datetime(2026, 7, 17, 10, 22, 57, 816380, tzinfo=TzInfo(0))
+2026-07-17 15:53:46 - GatewayLogger - INFO - limit-> provider = openai
+2026-07-17 15:53:46 - GatewayLogger - INFO - limit-> total count = 3
+2026-07-17 15:53:46 - GatewayLogger - INFO - Proxy-> promt_token = 3
+2026-07-17 15:53:46 - GatewayLogger - INFO - limit-> today = 2026-07-17
+2026-07-17 15:53:46 - GatewayLogger - INFO - limit-> redis key : usage:anonymous:2026-07-17
+2026-07-17 15:53:46 - GatewayLogger - INFO - limit-> count = 4
+2026-07-17 15:53:46 - GatewayLogger - INFO - Proxy-> daily_request_count = 4
+2026-07-17 15:53:46 - GatewayLogger - INFO - Query Normalized
+2026-07-17 15:53:46 - GatewayLogger - INFO - query hashed successfully
+2026-07-17 15:53:46 - GatewayLogger - INFO - Proxy-> hash_query = None
+2026-07-17 15:53:46 - GatewayLogger - INFO - cache-> Query in cached
+2026-07-17 15:53:46 - GatewayLogger - INFO - Proxy-> Query exist-> response=AskResponse(response='The capital of Japan is Tokyo.', tokens_used=161, provider='openai', cache_hit=True, pii_detected=False) cached_at=datetime.datetime(2026, 7, 17, 10, 22, 57, 816380, tzinfo=TzInfo(0))
+2026-07-17 15:59:05 - GatewayLogger - INFO - limit-> provider = openai
+2026-07-17 15:59:06 - GatewayLogger - INFO - limit-> total count = 5
+2026-07-17 15:59:06 - GatewayLogger - INFO - Proxy-> promt_token = 5
+2026-07-17 15:59:06 - GatewayLogger - INFO - limit-> today = 2026-07-17
+2026-07-17 15:59:06 - GatewayLogger - INFO - limit-> redis key : usage:anonymous:2026-07-17
+2026-07-17 15:59:07 - GatewayLogger - INFO - limit-> count = 5
+2026-07-17 15:59:07 - GatewayLogger - INFO - Proxy-> daily_request_count = 5
+2026-07-17 15:59:07 - GatewayLogger - INFO - Query Normalized
+2026-07-17 15:59:07 - GatewayLogger - INFO - query hashed successfully
+2026-07-17 15:59:07 - GatewayLogger - INFO - Proxy-> hash_query = f5570cdf1eb7d4c413f2639f22abb23297226f935668566ab4936ae195c4faa5
+2026-07-17 15:59:07 - GatewayLogger - INFO - cache-> Query not in cached
+2026-07-17 15:59:07 - GatewayLogger - INFO - Proxy-> Query exist-> False
+2026-07-17 15:59:07 - GatewayLogger - INFO - NO PII Detected
+2026-07-17 15:59:07 - GatewayLogger - INFO - No PII detected
+2026-07-17 15:59:07 - GatewayLogger - INFO - PII detected
+2026-07-17 15:59:11 - GatewayLogger - INFO - Cache created
+2026-07-17 16:00:16 - GatewayLogger - INFO - limit-> provider = openai
+2026-07-17 16:00:16 - GatewayLogger - INFO - limit-> total count = 3
+2026-07-17 16:00:16 - GatewayLogger - INFO - Proxy-> promt_token = 3
+2026-07-17 16:00:16 - GatewayLogger - INFO - limit-> today = 2026-07-17
+2026-07-17 16:00:16 - GatewayLogger - INFO - limit-> redis key : usage:anonymous:2026-07-17
+2026-07-17 16:00:16 - GatewayLogger - INFO - limit-> count = 6
+2026-07-17 16:00:16 - GatewayLogger - INFO - Proxy-> daily_request_count = 6
+2026-07-17 16:00:16 - GatewayLogger - INFO - Query Normalized
+2026-07-17 16:00:16 - GatewayLogger - INFO - query hashed successfully
+2026-07-17 16:00:16 - GatewayLogger - INFO - Proxy-> hash_query = aa08de9124c5dd394e41d0872f81582835bbd51d91e9d3e78c7e38ad1e2847f1
+2026-07-17 16:00:16 - GatewayLogger - INFO - cache-> Query not in cached
+2026-07-17 16:00:16 - GatewayLogger - INFO - Proxy-> Query exist-> False
+2026-07-17 16:00:16 - GatewayLogger - INFO - NO PII Detected
+2026-07-17 16:00:16 - GatewayLogger - INFO - No PII detected
+2026-07-17 16:00:16 - GatewayLogger - INFO - PII detected
+2026-07-17 16:00:18 - GatewayLogger - INFO - Cache created
+2026-07-17 16:00:26 - GatewayLogger - INFO - limit-> provider = openai
+2026-07-17 16:00:26 - GatewayLogger - INFO - limit-> total count = 3
+2026-07-17 16:00:26 - GatewayLogger - INFO - Proxy-> promt_token = 3
+2026-07-17 16:00:26 - GatewayLogger - INFO - limit-> today = 2026-07-17
+2026-07-17 16:00:26 - GatewayLogger - INFO - limit-> redis key : usage:anonymous:2026-07-17
+2026-07-17 16:00:26 - GatewayLogger - INFO - limit-> count = 7
+2026-07-17 16:00:26 - GatewayLogger - INFO - Proxy-> daily_request_count = 7
+2026-07-17 16:00:26 - GatewayLogger - INFO - Query Normalized
+2026-07-17 16:00:26 - GatewayLogger - INFO - query hashed successfully
+2026-07-17 16:00:26 - GatewayLogger - INFO - Proxy-> hash_query = aa08de9124c5dd394e41d0872f81582835bbd51d91e9d3e78c7e38ad1e2847f1
+2026-07-17 16:00:26 - GatewayLogger - INFO - cache-> Query in cached
+2026-07-17 16:00:26 - GatewayLogger - INFO - Proxy-> Query exist-> response=AskResponse(response='The capital of Russia is Moscow.', tokens_used=161, provider='openai', cache_hit=True, pii_detected=False) cached_at=datetime.datetime(2026, 7, 17, 10, 30, 18, 526517, tzinfo=TzInfo(0))
