@@ -1,7 +1,7 @@
 import re
 import hashlib
 from fastapi import HTTPException
-from app.utils.log_util import logger
+from src.app.utils.log_util import logger
 
 
 def normalize(query: str):

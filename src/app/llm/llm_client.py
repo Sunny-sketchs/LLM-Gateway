@@ -1,11 +1,11 @@
 from openai import OpenAI
-from app.config import settings
+from src.app.config import settings
 from fastapi import HTTPException
-from app.models.schemas import AskRequest, AskResponse,CacheEntry
+from src.app.models.schemas import AskRequest, AskResponse
 from dotenv import load_dotenv
-from app.llm.llm_prompt import prompts_llm
-from app.guardrails.guardrails import pii
-from app.utils.log_util import logger
+from src.app.llm.llm_prompt import prompts_llm
+from src.app.guardrails.guardrails import pii
+from src.app.utils.log_util import logger
 
 load_dotenv()
 
@@ -30,8 +30,8 @@ class LLM:
                 logger.info("No PII detected")
                 flag_pii = False
                 query = request.query
-
-            logger.info("PII detected")
+            else:
+                logger.info("PII detected")
 
             # Prompt layer
             messages = prompts_llm.build_prompt(query=query)

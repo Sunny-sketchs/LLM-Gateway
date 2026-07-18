@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     guard_models: list[dict] = [{"lang_code": "en", "model_name": "en_core_web_sm"}]
 
     max_tokens_per_request: int = 500
-    daily_request_limit: int = 50
+    daily_request_limit: int = 80
     llm_max_output_tokens: int = 500
 
     CACHE_TTL_SECONDS: int = 60 * 60 * 24 * 7

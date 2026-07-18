@@ -1,4 +1,4 @@
-from app.llm.prompts import SystemPrompt
+from src.app.llm.prompts import SystemPrompt
 
 
 class Prompts_LLM:

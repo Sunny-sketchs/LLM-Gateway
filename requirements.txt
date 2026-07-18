@@ -19,3 +19,5 @@ spacy
 presidio_analyzer~=2.2.363
 presidio_anonymizer~=2.2.363
 redis~=8.0.1
+
+streamlit

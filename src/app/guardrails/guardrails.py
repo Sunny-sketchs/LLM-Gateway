@@ -2,8 +2,8 @@ from presidio_analyzer import AnalyzerEngine
 from presidio_analyzer.nlp_engine import NlpEngineProvider
 from presidio_anonymizer import AnonymizerEngine
 from fastapi.exceptions import HTTPException
-from app.config import settings
-from app.utils.log_util import logger
+from src.app.config import settings
+from src.app.utils.log_util import logger
 
 
 configuration = {
