@@ -1,4 +1,5 @@
 import os
+import time
 import streamlit as st
 import requests
 
@@ -6,11 +7,24 @@ BASE_API_URL = os.getenv("API_URL", "http://127.0.0.1:8000")
 
 API_URL = f"{BASE_API_URL}/ask"
 HEALTH_URL = f"{BASE_API_URL}/health"
-
-# Single fixed user - there's no auth or per-user validation on the backend,
-# and a free-text user_id field with real API credits behind it is an easy
-# way to accidentally fan out spend across "users" with no accountability.
 GUEST_USER_ID = "guest-user"
+
+
+def wake_backend():
+    with st.spinner("Waking up backend... this can take up to a minute on first load."):
+        for attempt in range(6):
+            try:
+                response = requests.get(HEALTH_URL, timeout=10)
+                if response.status_code == 200:
+                    return True
+            except requests.exceptions.RequestException:
+                pass
+            time.sleep(10)
+        return False
+
+
+if "backend_awake" not in st.session_state:
+    st.session_state.backend_awake = wake_backend()
 
 st.set_page_config(page_title="LLM-Gateway", page_icon="🌌", layout="centered")
 
@@ -142,10 +156,6 @@ def handle_query(query: str):
             st.error(error)
             st.session_state.messages.append({"role": "assistant", "content": error})
         else:
-            # Backend returns a CacheEntry: {"response": AskResponse, "cached_at": ...}
-            # AskResponse's text field is itself called "response" (confirmed from
-            # schemas.py) — not "answer", and not the flat {"route","sources"} shape
-            # from the RAG-style project this file was likely copied from.
             ask_response = data.get("response", {})
             answer_text = ask_response.get("response", "")
             pii_detected = ask_response.get("pii_detected", False)
