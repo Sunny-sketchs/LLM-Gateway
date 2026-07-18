@@ -20,7 +20,7 @@ app.add_middleware(
 app.include_router(router)
 
 
-@app.api_route("/health", methods=["GET", "HEAD"])
+@app.api_route("/stats", methods=["GET", "HEAD"])
 def health():
     redis_ok = True
     try:
@@ -30,3 +30,9 @@ def health():
     except Exception:
         redis_ok = False
     return {"status": "ok", "redis": "ok" if redis_ok else "unreachable"}
+
+
+@app.api_route("/health", methods=["GET", "HEAD"])
+def health():
+    return {"status": "ok"}
+
