@@ -1,4 +1,5 @@
 from os import getenv
+from fastapi.exceptions import HTTPException
 
 import redis
 
@@ -10,5 +11,4 @@ redis_client = redis.from_url(
     socket_connect_timeout=5,
     socket_timeout=5,
 )
-
 

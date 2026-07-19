@@ -21,3 +21,5 @@ presidio_anonymizer~=2.2.363
 redis~=8.0.1
 
 streamlit
+sqlalchemy
+psycopg2

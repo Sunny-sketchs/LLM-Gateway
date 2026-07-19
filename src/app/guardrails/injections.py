@@ -1,4 +1,6 @@
 import re
+from src.app.models.schemas import AskRequest
+from pydantic import BaseModel
 
 INJECTION_PATTERNS = [
     r"ignore (all |the |any )?(previous|prior|above|earlier) instructions",
@@ -18,10 +20,14 @@ INJECTION_PATTERNS = [
 _compiled = [re.compile(p, re.IGNORECASE) for p in INJECTION_PATTERNS]
 
 
-def detect_injection(query: str) -> dict:
+def detect_injection(request: AskRequest):
+    query=request.query
+    requests = request.model_dump()
     matched = [p.pattern for p in _compiled if p.search(query)]
-    return {
+    inject_obj = {
         "flagged": len(matched) > 0,
         "matched_patterns": matched,
     }
 
+    requests["injection"] = inject_obj
+    return requests

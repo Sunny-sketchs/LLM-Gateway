@@ -1,13 +1,17 @@
 from datetime import datetime, timezone
 from src.app.config import settings
-from fastapi import HTTPException
+from fastapi import HTTPException, BackgroundTasks
 from src.app.redis_setup.redis_client import redis_client
 from src.app.utils.log_util import logger
+from src.app.models.schemas import AskRequest
+
 
 class LIMIT:
 
-    def check_prompt_limit(self, query: str, provider: str = "openai"):
+    def check_prompt_limit(self, request: AskRequest, background_Tasks: BackgroundTasks):
         try:
+            query = request.query
+            provider = request.provider
             logger.info(f'limit-> provider = {provider}')
 
             if provider == "openai":
@@ -20,16 +24,26 @@ class LIMIT:
 
                 if token_count > settings.max_tokens_per_request:
                     logger.info(f"limit-> total count > max token per request({settings.max_tokens_per_request})")
-                    raise HTTPException(status_code=400, detail=f'Token limit exceeded, token count-> {token_count} max token-> {settings.max_tokens_per_request}')
+                    background_Tasks.add_task(
+                        logger.log_request,
+                        provider=request.provider,
+                        user_id=request.user_id,
+                        status_code=400,
+                    )
+                    raise HTTPException(status_code=400,
+                                        detail=f'Token limit exceeded, token count-> {token_count} max token-> {settings.max_tokens_per_request}')
 
                 return token_count
+
+        except HTTPException:
+            raise  # let intentional HTTP errors (403, 422, 400, etc.) pass through untouched
         except Exception as e:
             logger.info(f"limit-> Exception-> {e}")
             raise HTTPException(status_code=500, detail=e)
 
-
-    def check_daily_limit(self, user_id: str):
+    def check_daily_limit(self, request: AskRequest, background_tasks:BackgroundTasks):
         try:
+            user_id = request.user_id
             today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
             logger.info(f"limit-> today = {today}")
 
@@ -43,9 +57,18 @@ class LIMIT:
 
             if count > settings.daily_request_limit:
                 logger.info(f'limit-> count exceeds daily rate limit')
+                background_tasks.add_task(
+                    logger.log_request,
+                    provider=request.provider,
+                    user_id=request.user_id,
+                    status_code=429,
+                )
                 raise HTTPException(status_code=429, detail=f"Exhausted request limit")
 
             return count
+
+        except HTTPException:
+            raise  # let intentional HTTP errors (403, 422, 400, etc.) pass through untouched
         except Exception as e:
             logger.info(f'limit-> {e}')
             raise HTTPException(status_code=500, detail=e)

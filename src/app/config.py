@@ -1,5 +1,8 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 class Settings(BaseSettings):
@@ -13,9 +16,9 @@ class Settings(BaseSettings):
     guard_nlp_engine_name: str = "spacy"
     guard_models: list[dict] = [{"lang_code": "en", "model_name": "en_core_web_sm"}]
 
-    max_tokens_per_request: int = 500
-    daily_request_limit: int = 80
-    llm_max_output_tokens: int = 500
+    max_tokens_per_request: int = os.getenv("MAX_TOKENS_PER_REQUEST", 500)
+    daily_request_limit: int = os.getenv("DAILY_REQUEST_LIMIT", 50)
+    llm_max_output_tokens: int = os.getenv("LLM_MAX_OUTPUT_TOKENS", 500)
 
     CACHE_TTL_SECONDS: int = 60 * 60 * 24 * 7
 
@@ -27,7 +30,6 @@ class Settings(BaseSettings):
         case_sensitive=False,
         extra="ignore",
     )
-
 
 
 settings = Settings()

@@ -29,6 +29,7 @@ def health():
             redis_ok = False
     except Exception:
         redis_ok = False
+        return Exception
     return {"status": "ok", "redis": "ok" if redis_ok else "unreachable"}
 
 

@@ -13,8 +13,8 @@ class AskRequest(BaseModel):
         v = v.strip()
         if not v:
             raise ValueError("query cannot be empty")
-        if len(v) > 2000:
-            raise ValueError("query too long max(2000 characters)")
+        # if len(v) > 2000:
+        #     raise ValueError("query too long max(2000 characters)")
         return v
 
 
