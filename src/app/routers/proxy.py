@@ -15,19 +15,19 @@ def ask_query(request: AskRequest, background_tasks: BackgroundTasks):
     try:
         # check if the prompt is longer then specified
         prompt_token = limit.check_prompt_limit(request, background_tasks)
-        logger.info(f'Proxy-> promt_token = {prompt_token}')
+        # logger.info(f'Proxy-> promt_token = {prompt_token}')
 
         # check daily request count
         daily_request_count = limit.check_daily_limit(request, background_tasks)
-        logger.info(f'Proxy-> daily_request_count = {daily_request_count}')
+        # logger.info(f'Proxy-> daily_request_count = {daily_request_count}')
 
         # Normalized + hash the query
         hash_query = hashes_query(request, background_tasks)
-        logger.info(f'Proxy-> hash_query = {hash_query}')
+        # logger.info(f'Proxy-> hash_query = {hash_query}')
 
         # check if the query exists in the cache
         result = get_cache(hash_query)
-        logger.info(f'Proxy-> Query exist-> {result}')
+        # logger.info(f'Proxy-> Query exist-> {result}')
 
         # if query exists return the answer
         if result:
@@ -44,7 +44,7 @@ def ask_query(request: AskRequest, background_tasks: BackgroundTasks):
         # check for prompt injections
         injection_result = detect_injection(request)
         if injection_result["injection"]["flagged"]:
-            logger.info(f'Injection found as {injection_result["injection"]["matched_patterns"]}')
+            # logger.info(f'Injection found as {injection_result["injection"]["matched_patterns"]}')
             print("ABOUT TO ADD TASK")
             logger.log_request(
                 provider=request.provider,

@@ -84,41 +84,41 @@ class PII:
             ]
 
             if len(filter_by_score) == 0:
-                logger.info("NO PII Detected")
-                background_tasks.add_task(
-                    logger.log_request,
-                    provider=request.provider,
-                    user_id=request.user_id,
-                    status_code=200,
-                    pii_detected=False,
-                    query_redacted=query,
-                )
+                # logger.info("NO PII Detected")
+                # background_tasks.add_task(
+                #     logger.log_request,
+                #     provider=request.provider,
+                #     user_id=request.user_id,
+                #     status_code=200,
+                #     pii_detected=False,
+                #     query_redacted=query,
+                # )
                 return False
 
-            logger.info(f"PII detected: {[r.entity_type for r in filter_by_score]}")
+            # logger.info(f"PII detected: {[r.entity_type for r in filter_by_score]}")
             anonymizer_result = anonymizer.anonymize(
                 text=query,
                 analyzer_results=filter_by_score,
             )
 
-            background_tasks.add_task(
-                logger.log_request,
-                provider=request.provider,
-                user_id=request.user_id,
-                status_code=200,
-                pii_detected=True,
-            )
+            # background_tasks.add_task(
+            #     logger.log_request,
+            #     provider=request.provider,
+            #     user_id=request.user_id,
+            #     status_code=200,
+            #     pii_detected=True,
+            # )
             return anonymizer_result.text
         except HTTPException:
             raise  # let intentional HTTP errors (403, 422, 400, etc.) pass through untouched
         except Exception as e:
-            logger.info("PII Guardrail failed")
-            background_tasks.add_task(
-                logger.log_request,
-                provider=request.provider,
-                user_id=request.user_id,
-                status_code=500,
-            )
+            # logger.info("PII Guardrail failed")
+            # background_tasks.add_task(
+            #     logger.log_request,
+            #     provider=request.provider,
+            #     user_id=request.user_id,
+            #     status_code=500,
+            # )
             raise HTTPException(status_code=500, detail=f'gaurdrail -> {e}')
 
 

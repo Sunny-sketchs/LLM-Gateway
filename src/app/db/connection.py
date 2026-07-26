@@ -13,6 +13,7 @@ neon_pooled_url = os.getenv("DATABASE_URL")
 
 engine = create_engine(
     neon_pooled_url,
+    echo=True,
     pool_size=5,
     max_overflow=10,
     pool_pre_ping=True,

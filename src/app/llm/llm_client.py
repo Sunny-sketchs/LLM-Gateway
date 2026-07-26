@@ -51,29 +51,29 @@ class LLM:
                 pii_detected=flag_pii
             )
 
-            background_tasks.add_task(
-                logger.log_request,
-                provider=request.provider,
-                user_id=request.user_id,
-                status_code=200,
-                pii_detected=flag_pii,
-                query_redacted=result.response,
-                tokens_used=result.tokens_used,
-            )
+            # background_tasks.add_task(
+            #     logger.log_request,
+            #     provider=request.provider,
+            #     user_id=request.user_id,
+            #     status_code=200,
+            #     pii_detected=flag_pii,
+            #     query_redacted=result.response,
+            #     tokens_used=result.tokens_used,
+            # )
             return result
         except HTTPException:
             raise  # let intentional HTTP errors (403, 422, 400, etc.) pass through untouched
         except ValueError as e:
-            logger.exception("LLM openai-invoke failed by ValueError")
+            # logger.exception("LLM openai-invoke failed by ValueError")
             raise ValueError("Value Error")
         except Exception as e:
-            logger.exception("LLM openai-invoke failed")
-            background_tasks.add_task(
-                logger.log_request,
-                provider=request.provider,
-                user_id=request.user_id,
-                status_code=500,
-            )
+            # logger.exception("LLM openai-invoke failed")
+            # background_tasks.add_task(
+            #     logger.log_request,
+            #     provider=request.provider,
+            #     user_id=request.user_id,
+            #     status_code=500,
+            # )
             raise HTTPException(status_code=500, detail=f'llm ->{e}')
 
 

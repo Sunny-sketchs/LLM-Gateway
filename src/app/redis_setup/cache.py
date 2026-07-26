@@ -14,12 +14,12 @@ def get_cache(hashed_query: str):
         key = f"cache:{hashed_query}"
         raw = redis_client.get(key)
         if not raw:
-            logger.info(f'cache-> Query not in cached')
+            # logger.info(f'cache-> Query not in cached')
             return False
 
         result = CacheEntry.model_validate_json(raw)
         result.response.cache_hit = True
-        logger.info(f'cache-> Query in cached')
+        # logger.info(f'cache-> Query in cached')
         return result
     except HTTPException:
         raise  # let intentional HTTP errors (403, 422, 400, etc.) pass through untouched
@@ -34,10 +34,10 @@ def store_cache(hashed_query: str, response_obj: AskResponse):
     try:
         entry = CacheEntry(response=response_obj, cached_at=datetime.now(timezone.utc))
         redis_client.set(f"cache:{hashed_query}", entry.model_dump_json(), ex=settings.CACHE_TTL_SECONDS)
-        logger.info(f'Cache created')
+        # logger.info(f'Cache created')
         return entry
     except HTTPException:
         raise  # let intentional HTTP errors (403, 422, 400, etc.) pass through untouched
     except Exception as e:
-        logger.info(f'Could not store cache-> {e}')
+        # logger.info(f'Could not store cache-> {e}')
         raise HTTPException(status_code=500, detail=e)
