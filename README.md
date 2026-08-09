@@ -174,3 +174,7 @@ Single guest-user mode — no API keys, no signup. This is a deliberate MVP scop
 ---
 
 Built as a learning project to explore the systems side of deploying LLMs safely — auth, cost control, and auditability — rather than just calling an API and printing the response.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
+
