@@ -165,11 +165,11 @@ Single guest-user mode — no API keys, no signup. This is a deliberate MVP scop
 
 ## Future Scope
 
-- [ ] Admin-issued, hashed API key auth (schema designed, not wired up)
-- [ ] Multi-provider support (Gemini, Claude, Grok) with fallback routing
-- [ ] Daily *token-sum* limit (currently only request-count limits exist)
-- [ ] LLM-based injection classifier as a second detection layer
-- [ ] Simple usage dashboard visualizing requests, cost, and cache savings over time
+-  Admin-issued, hashed API key auth (schema designed, not wired up)
+-  Multi-provider support (Gemini, Claude, Grok) with fallback routing
+-  Daily *token-sum* limit (currently only request-count limits exist)
+-  LLM-based injection classifier as a second detection layer
+-  Simple usage dashboard visualizing requests, cost, and cache savings over time
 
 ---
 
