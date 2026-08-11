@@ -8,6 +8,18 @@ A safety and cost-control proxy that sits in front of an LLM API. Every request 
 > First request after a period of inactivity may take 30–60s to respond — the free-tier host sleeps when idle and needs to wake up.
 
 ---
+# Results
+
+### 25/25 automated test cases passed (validation, token limits, rate limits, cache correctness, PII detection, prompt injection blocking)
+
+Cache hits saved 1,530 tokens across the eval run
+12 PII instances caught and redacted
+5/5 direct prompt-injection attempts blocked; 1 rephrased variant confirmed to bypass — documented, not hidden
+Total measured cost across run: $0.000564
+
+All numbers pulled directly from Neon request logs, not estimated.
+
+---
 
 ## What this is
 
